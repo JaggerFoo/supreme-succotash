@@ -140,6 +140,8 @@ contract zkuMtree  {
   // uint256 public current_level = 0;
   uint256 public addedCount    = 0;
 
+  uint256 public MAXLEAVES = 5;
+
   mapping(uint256 => bytes32) public mtree;
 
   ////////////////////////////////////////////////////////
@@ -153,6 +155,7 @@ contract zkuMtree  {
   //   note: #nodes includes leaf nodes and root node
   ////////////////////////////////////////////////////////
   constructor(uint256 exp) {
+  require(exp > 0 && (2**exp) <= MAXLEAVES, "The exponent of 2 must be between 1 and 5");
     // exp_of_2 = exp;
     leaves   = 2**exp;             // number of leaf nodes in tree
     // levels   = exp + 1;
