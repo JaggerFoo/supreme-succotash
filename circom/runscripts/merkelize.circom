@@ -21,7 +21,7 @@ template HashLeftRight() {
 
 // Merkleroot: Given an array of size 2**y, where y is a reasonably small integer (2 or 3)
 // calculate the merkle root of the array
-template MyTemplateName(exp) {
+template merkelize(exp) {
 
   signal input levels;
   signal input leaves[2**exp];
@@ -82,3 +82,4 @@ template MyTemplateName(exp) {
 
 }
 
+component main{public [levels, leaves]} = merkelize(2);
