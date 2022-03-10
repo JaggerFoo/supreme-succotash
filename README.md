@@ -31,7 +31,7 @@ The week 1 repository contains information and code for Q1 and Q2 of the ZKU Wee
 
 ## Intro to Circom
 
-#### 1. Construct a circuit
+### 1. Construct a circuit
 
 Directory circom/templates
 * program file: Merkleroot.circom
@@ -39,30 +39,30 @@ Directory circom/templates
 * program file: mimcsponge.circom
   * This code was required to generate the hashes used to populate the merkle tree.
 
-#### 2. Generate a proof using 8 leaves instead of 4. Document any errors and how you fixed it.
+### 2. Generate a proof using 8 leaves instead of 4. Document any errors and how you fixed it.
 
 * A screenshot of the error is provided
   * file: circom/screenshots/Groth16-Failure-2022-03-07.png
 
 * A discussion is contained in the pdf file that was submitted. But the fix was to increase the max contraints parameter from 12 to 15.
 
-#### 3. Discussion
+### 3. Discussion
 
 * This is contained in the pdf file that was submitted.
 
 
 
-### Solidity
+## Solidity
 
-#### Q2 - Minting an NFT and committing the mint data to a Merkle Tree
+## Q2 - Minting an NFT and committing the mint data to a Merkle Tree
 
-#### Items 1 and 2
+### Items 1 and 2
 
   * zkuNFT.sol - Solidity file that contains two contracts.
     * zkuNFT - Mints and NFT and submits it to the Merkle tree contract
     * zkuMtree - Hashes NFT attributes and adds the hash to a Merkle tree.
 
-#### Item 3
+### Item 3
 
 Screenshots for the requirement to mint two NFTs are in the solidity/screenshots directory:
 
@@ -73,5 +73,3 @@ Screenshots for the requirement to mint two NFTs are in the solidity/screenshots
 * Mint2-Potion-zkuMtree.png: Shows the state variables of the contract after the second NFT is added to the Merkle tree.
 * Final-Root-zkuMtree.png: Shows the final root hash in the zkuMtree contract.
 * Mint-Full-Tree-zkuNFT.png: Shows the error message given when trying to mint an NFT when the Merkle tree is already full.
-
-
